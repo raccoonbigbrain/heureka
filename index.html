@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Coming soon · Big Brain Raccoon</title>
+<meta name="theme-color" content="#0496FF">
+<style>
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0496FF; color: #fff; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; text-align: center; padding: 16px; box-sizing: border-box; }
+h1 { font-size: clamp(32px, 8vw, 56px); margin: 0 0 8px; font-weight: 900; }
+p { font-size: 18px; margin: 0 0 6px; opacity: .95; }
+small { opacity: .8; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Coming soon</h1>
+  <p>Something curious from Big Brain Raccoon is on its way.</p>
+  <small id="dev"></small>
+</main>
+<script>
+const ua = navigator.userAgent, plat = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
+const d = /android/i.test(ua) ? "Android" : /iphone|ipad|ipod/i.test(ua) ? "iPhone / iPad" : (/mac/i.test(plat) ? (navigator.maxTouchPoints > 1 ? "iPhone / iPad" : "Mac") : /win/i.test(plat) ? "Windows" : "other device");
+document.getElementById("dev").textContent = "Detected device: " + d;
+</script>
+</body>
+</html>
